@@ -1,0 +1,6 @@
+{
+  "name": "Oculus Ophthalmic Hospital & Vision Institute",
+  "description": "A cinematic, interactive eye hospital and advanced ophthalmic care center website featuring realistic iris animations, diagnostic guidance, anatomy explorer, and appointment bookings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
