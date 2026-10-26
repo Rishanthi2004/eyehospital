@@ -1,3 +1,5 @@
+import { IMAGES } from '../assets/images';
+
 export interface ServiceItem {
   id: string;
   name: string;
@@ -23,6 +25,7 @@ export interface DoctorItem {
   availableDays: string[];
   bio: string;
   avatarSeed: string;
+  image: string;
 }
 
 export interface TechItem {
@@ -210,7 +213,8 @@ export const DOCTORS_LIST: DoctorItem[] = [
     languages: ['English', 'French', 'German'],
     availableDays: ['Mon', 'Wed', 'Thu'],
     bio: 'Pioneered micro-coaxial phacoemulsification techniques with over 14,000 successful lens restorations. Known for compassionate patient dialogue and custom wavefront optical matching.',
-    avatarSeed: 'elena'
+    avatarSeed: 'elena',
+    image: IMAGES.doctorElena,
   },
   {
     id: 'dr-julian-mercer',
@@ -223,7 +227,8 @@ export const DOCTORS_LIST: DoctorItem[] = [
     languages: ['English', 'Spanish'],
     availableDays: ['Tue', 'Thu', 'Fri'],
     bio: 'International authority on high-resolution OCT-guided retinal membrane peeling and novel micro-dosing therapies for age-related macular degeneration.',
-    avatarSeed: 'julian'
+    avatarSeed: 'julian',
+    image: IMAGES.doctorJulian,
   },
   {
     id: 'dr-sophia-al-mansoor',
@@ -236,7 +241,8 @@ export const DOCTORS_LIST: DoctorItem[] = [
     languages: ['English', 'Arabic'],
     availableDays: ['Mon', 'Tue', 'Wed', 'Sat'],
     bio: 'Dedicated to preserving optic nerve vitality using gentle selective laser trabeculoplasty and micro-stents to reduce medication dependency and maintain active lifestyles.',
-    avatarSeed: 'sophia'
+    avatarSeed: 'sophia',
+    image: IMAGES.doctorSophia,
   },
   {
     id: 'dr-arthur-chen',
@@ -249,7 +255,8 @@ export const DOCTORS_LIST: DoctorItem[] = [
     languages: ['English', 'Mandarin'],
     availableDays: ['Wed', 'Fri', 'Sat'],
     bio: 'Creates a calming, joy-filled environment for children and infants. Specializes in adjustable-suture strabismus surgery and evidence-based childhood myopia containment.',
-    avatarSeed: 'arthur'
+    avatarSeed: 'arthur',
+    image: IMAGES.doctorArthur,
   }
 ];
 

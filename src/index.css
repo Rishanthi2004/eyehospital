@@ -5,15 +5,28 @@
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --color-ivory: #F8F6F0;
   --color-pearl: #FFFFFF;
-  --color-sky-light: #E7F2F8;
-  --color-teal-soft: #CDE7E4;
-  --color-navy: #17324D;
-  --color-aqua: #72B7BC;
+  --color-sky-light: #E9F6F1;
+  --color-teal-soft: #D1ECE2;
+  --color-navy: #16382C;
+  --color-aqua: #45AC8B;
   --color-champagne: #E8D9C7;
 }
 
 html {
   font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 .font-display {
@@ -57,11 +70,11 @@ html {
   background: #F8F6F0;
 }
 ::-webkit-scrollbar-thumb {
-  background: #CDE7E4;
+  background: #D1ECE2;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #72B7BC;
+  background: #45AC8B;
 }
 
 /* Hide scrollbar for clean horizontal swiping on mobile */

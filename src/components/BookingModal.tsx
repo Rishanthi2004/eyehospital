@@ -107,7 +107,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
         particleCount: 80,
         spread: 60,
         origin: { y: 0.6 },
-        colors: ['#17324D', '#72B7BC', '#CDE7E4', '#E8D9C7']
+        colors: ['#16382C', '#45AC8B', '#D1ECE2', '#E8D9C7']
       });
     }, 900);
   };
@@ -156,17 +156,17 @@ END:VCALENDAR`;
   const minDateStr = tomorrow.toISOString().split('T')[0];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#17324D]/60 backdrop-blur-sm overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#16382C]/60 backdrop-blur-sm overflow-y-auto">
       <motion.div
         initial={{ opacity: 0, scale: 0.94, y: 15 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.94, y: 15 }}
-        className="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-[#17324D]/10 relative my-8"
+        className="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-[#16382C]/10 relative my-8"
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 text-[#17324D]/60 hover:text-[#17324D] rounded-lg hover:bg-[#F8F6F0] transition-colors"
+          className="absolute top-5 right-5 p-2 text-[#16382C]/60 hover:text-[#16382C] rounded-lg hover:bg-[#F8F6F0] transition-colors"
           aria-label="Close dialog"
         >
           <X className="w-5 h-5" />
@@ -176,14 +176,14 @@ END:VCALENDAR`;
           <div>
             {/* Header */}
             <div className="mb-6">
-              <div className="flex items-center gap-2 text-xs font-semibold text-[#72B7BC] uppercase tracking-wider mb-1">
+              <div className="flex items-center gap-2 text-xs font-semibold text-[#45AC8B] uppercase tracking-wider mb-1">
                 <Calendar className="w-4 h-4" />
                 <span>Ophthalmic Consultation Request</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-[#17324D] font-display">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-[#16382C] font-display">
                 Schedule Your Eye Examination.
               </h3>
-              <p className="text-xs sm:text-sm text-[#17324D]/75 mt-1">
+              <p className="text-xs sm:text-sm text-[#16382C]/75 mt-1">
                 Reserve an in-person diagnostic evaluation or second opinion. No referral required for general assessment.
               </p>
             </div>
@@ -193,18 +193,18 @@ END:VCALENDAR`;
               {/* Row 1: Patient Name & Phone */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-[#17324D] uppercase tracking-wider mb-1.5">
+                  <label className="block text-xs font-bold text-[#16382C] uppercase tracking-wider mb-1.5">
                     Patient Full Name *
                   </label>
                   <div className="relative">
-                    <User className="w-4 h-4 text-[#17324D]/40 absolute left-3.5 top-3" />
+                    <User className="w-4 h-4 text-[#16382C]/40 absolute left-3.5 top-3" />
                     <input
                       type="text"
                       placeholder="e.g. Eleanor Roosevelt"
                       value={formData.patientName}
                       onChange={(e) => setFormData({ ...formData, patientName: e.target.value })}
-                      className={`w-full pl-10 pr-3.5 py-2.5 bg-[#F8F6F0] border rounded-xl text-xs sm:text-sm text-[#17324D] placeholder:text-[#17324D]/40 focus:outline-none focus:ring-2 focus:ring-[#72B7BC] ${
-                        errors.patientName ? 'border-red-400 bg-red-50/20' : 'border-[#17324D]/10'
+                      className={`w-full pl-10 pr-3.5 py-2.5 bg-[#F8F6F0] border rounded-xl text-xs sm:text-sm text-[#16382C] placeholder:text-[#16382C]/40 focus:outline-none focus:ring-2 focus:ring-[#45AC8B] ${
+                        errors.patientName ? 'border-red-400 bg-red-50/20' : 'border-[#16382C]/10'
                       }`}
                     />
                   </div>
@@ -214,18 +214,18 @@ END:VCALENDAR`;
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[#17324D] uppercase tracking-wider mb-1.5">
+                  <label className="block text-xs font-bold text-[#16382C] uppercase tracking-wider mb-1.5">
                     Mobile Phone Number *
                   </label>
                   <div className="relative">
-                    <Phone className="w-4 h-4 text-[#17324D]/40 absolute left-3.5 top-3" />
+                    <Phone className="w-4 h-4 text-[#16382C]/40 absolute left-3.5 top-3" />
                     <input
                       type="tel"
                       placeholder="e.g. +1 (415) 555-0192"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className={`w-full pl-10 pr-3.5 py-2.5 bg-[#F8F6F0] border rounded-xl text-xs sm:text-sm text-[#17324D] placeholder:text-[#17324D]/40 focus:outline-none focus:ring-2 focus:ring-[#72B7BC] ${
-                        errors.phone ? 'border-red-400 bg-red-50/20' : 'border-[#17324D]/10'
+                      className={`w-full pl-10 pr-3.5 py-2.5 bg-[#F8F6F0] border rounded-xl text-xs sm:text-sm text-[#16382C] placeholder:text-[#16382C]/40 focus:outline-none focus:ring-2 focus:ring-[#45AC8B] ${
+                        errors.phone ? 'border-red-400 bg-red-50/20' : 'border-[#16382C]/10'
                       }`}
                     />
                   </div>
@@ -238,17 +238,17 @@ END:VCALENDAR`;
               {/* Row 2: Email & Visit Type */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-[#17324D] uppercase tracking-wider mb-1.5">
+                  <label className="block text-xs font-bold text-[#16382C] uppercase tracking-wider mb-1.5">
                     Email Address (Optional)
                   </label>
                   <div className="relative">
-                    <Mail className="w-4 h-4 text-[#17324D]/40 absolute left-3.5 top-3" />
+                    <Mail className="w-4 h-4 text-[#16382C]/40 absolute left-3.5 top-3" />
                     <input
                       type="email"
                       placeholder="For calendar & prep instructions"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full pl-10 pr-3.5 py-2.5 bg-[#F8F6F0] border border-[#17324D]/10 rounded-xl text-xs sm:text-sm text-[#17324D] placeholder:text-[#17324D]/40 focus:outline-none focus:ring-2 focus:ring-[#72B7BC]"
+                      className="w-full pl-10 pr-3.5 py-2.5 bg-[#F8F6F0] border border-[#16382C]/10 rounded-xl text-xs sm:text-sm text-[#16382C] placeholder:text-[#16382C]/40 focus:outline-none focus:ring-2 focus:ring-[#45AC8B]"
                     />
                   </div>
                   {errors.email && (
@@ -257,13 +257,13 @@ END:VCALENDAR`;
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[#17324D] uppercase tracking-wider mb-1.5">
+                  <label className="block text-xs font-bold text-[#16382C] uppercase tracking-wider mb-1.5">
                     Visit Purpose
                   </label>
                   <select
                     value={formData.visitType}
                     onChange={(e) => setFormData({ ...formData, visitType: e.target.value })}
-                    className="w-full px-3.5 py-2.5 bg-[#F8F6F0] border border-[#17324D]/10 rounded-xl text-xs sm:text-sm text-[#17324D] focus:outline-none focus:ring-2 focus:ring-[#72B7BC]"
+                    className="w-full px-3.5 py-2.5 bg-[#F8F6F0] border border-[#16382C]/10 rounded-xl text-xs sm:text-sm text-[#16382C] focus:outline-none focus:ring-2 focus:ring-[#45AC8B]"
                   >
                     <option value="First-time comprehensive consultation">First-time comprehensive consultation</option>
                     <option value="Cataract & lens replacement consultation">Cataract & lens replacement consultation</option>
@@ -278,13 +278,13 @@ END:VCALENDAR`;
               {/* Row 3: Service Selection & Preferred Specialist */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-[#17324D] uppercase tracking-wider mb-1.5">
+                  <label className="block text-xs font-bold text-[#16382C] uppercase tracking-wider mb-1.5">
                     Clinical Service Program
                   </label>
                   <select
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    className="w-full px-3.5 py-2.5 bg-[#F8F6F0] border border-[#17324D]/10 rounded-xl text-xs sm:text-sm text-[#17324D] focus:outline-none focus:ring-2 focus:ring-[#72B7BC]"
+                    className="w-full px-3.5 py-2.5 bg-[#F8F6F0] border border-[#16382C]/10 rounded-xl text-xs sm:text-sm text-[#16382C] focus:outline-none focus:ring-2 focus:ring-[#45AC8B]"
                   >
                     {SERVICES_LIST.map((srv) => (
                       <option key={srv.id} value={srv.name}>{srv.name}</option>
@@ -293,13 +293,13 @@ END:VCALENDAR`;
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[#17324D] uppercase tracking-wider mb-1.5">
+                  <label className="block text-xs font-bold text-[#16382C] uppercase tracking-wider mb-1.5">
                     Preferred Surgeon / Specialist
                   </label>
                   <select
                     value={formData.doctor}
                     onChange={(e) => setFormData({ ...formData, doctor: e.target.value })}
-                    className="w-full px-3.5 py-2.5 bg-[#F8F6F0] border border-[#17324D]/10 rounded-xl text-xs sm:text-sm text-[#17324D] focus:outline-none focus:ring-2 focus:ring-[#72B7BC]"
+                    className="w-full px-3.5 py-2.5 bg-[#F8F6F0] border border-[#16382C]/10 rounded-xl text-xs sm:text-sm text-[#16382C] focus:outline-none focus:ring-2 focus:ring-[#45AC8B]"
                   >
                     <option value="First Available Subspecialist">First Available Subspecialist</option>
                     {DOCTORS_LIST.map((doc) => (
@@ -312,7 +312,7 @@ END:VCALENDAR`;
               {/* Row 4: Preferred Date & Time Slot */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-[#17324D] uppercase tracking-wider mb-1.5">
+                  <label className="block text-xs font-bold text-[#16382C] uppercase tracking-wider mb-1.5">
                     Preferred Consultation Date *
                   </label>
                   <input
@@ -320,8 +320,8 @@ END:VCALENDAR`;
                     min={minDateStr}
                     value={formData.preferredDate}
                     onChange={(e) => setFormData({ ...formData, preferredDate: e.target.value })}
-                    className={`w-full px-3.5 py-2.5 bg-[#F8F6F0] border rounded-xl text-xs sm:text-sm text-[#17324D] focus:outline-none focus:ring-2 focus:ring-[#72B7BC] ${
-                      errors.preferredDate ? 'border-red-400 bg-red-50/20' : 'border-[#17324D]/10'
+                    className={`w-full px-3.5 py-2.5 bg-[#F8F6F0] border rounded-xl text-xs sm:text-sm text-[#16382C] focus:outline-none focus:ring-2 focus:ring-[#45AC8B] ${
+                      errors.preferredDate ? 'border-red-400 bg-red-50/20' : 'border-[#16382C]/10'
                     }`}
                   />
                   {errors.preferredDate && (
@@ -330,13 +330,13 @@ END:VCALENDAR`;
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[#17324D] uppercase tracking-wider mb-1.5">
+                  <label className="block text-xs font-bold text-[#16382C] uppercase tracking-wider mb-1.5">
                     Preferred Time Window
                   </label>
                   <select
                     value={formData.preferredTime}
                     onChange={(e) => setFormData({ ...formData, preferredTime: e.target.value })}
-                    className="w-full px-3.5 py-2.5 bg-[#F8F6F0] border border-[#17324D]/10 rounded-xl text-xs sm:text-sm text-[#17324D] focus:outline-none focus:ring-2 focus:ring-[#72B7BC]"
+                    className="w-full px-3.5 py-2.5 bg-[#F8F6F0] border border-[#16382C]/10 rounded-xl text-xs sm:text-sm text-[#16382C] focus:outline-none focus:ring-2 focus:ring-[#45AC8B]"
                   >
                     <option value="Morning (08:30 - 11:30)">Morning Clinic (08:30 - 11:30)</option>
                     <option value="Midday (11:30 - 14:30)">Midday Clinic (11:30 - 14:30)</option>
@@ -348,7 +348,7 @@ END:VCALENDAR`;
 
               {/* Optional Notes */}
               <div>
-                <label className="block text-xs font-bold text-[#17324D] uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-bold text-[#16382C] uppercase tracking-wider mb-1.5">
                   Specific Symptoms or Prior Diagnoses (Optional)
                 </label>
                 <textarea
@@ -356,14 +356,14 @@ END:VCALENDAR`;
                   placeholder="e.g. Glare while driving at night, dry gritty sensation, or recent blurred vision in left eye..."
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                  className="w-full px-3.5 py-2.5 bg-[#F8F6F0] border border-[#17324D]/10 rounded-xl text-xs sm:text-sm text-[#17324D] placeholder:text-[#17324D]/40 focus:outline-none focus:ring-2 focus:ring-[#72B7BC]"
+                  className="w-full px-3.5 py-2.5 bg-[#F8F6F0] border border-[#16382C]/10 rounded-xl text-xs sm:text-sm text-[#16382C] placeholder:text-[#16382C]/40 focus:outline-none focus:ring-2 focus:ring-[#45AC8B]"
                 />
               </div>
 
               {/* Form Actions */}
-              <div className="pt-3 border-t border-[#17324D]/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div className="flex items-center gap-2 text-[11px] text-[#17324D]/60">
-                  <ShieldCheck className="w-4 h-4 text-[#72B7BC] shrink-0" />
+              <div className="pt-3 border-t border-[#16382C]/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="flex items-center gap-2 text-[11px] text-[#16382C]/60">
+                  <ShieldCheck className="w-4 h-4 text-[#45AC8B] shrink-0" />
                   <span>Confidential HIPAA Encrypted Booking</span>
                 </div>
 
@@ -371,14 +371,14 @@ END:VCALENDAR`;
                   <button
                     type="button"
                     onClick={onClose}
-                    className="w-full sm:w-auto px-5 py-2.5 text-xs font-semibold text-[#17324D] hover:bg-[#F8F6F0] rounded-xl transition-colors"
+                    className="w-full sm:w-auto px-5 py-2.5 text-xs font-semibold text-[#16382C] hover:bg-[#F8F6F0] rounded-xl transition-colors"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full sm:w-auto px-7 py-3 text-xs font-bold uppercase tracking-wider text-white bg-[#17324D] hover:bg-[#1a3957] rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60"
+                    className="w-full sm:w-auto px-7 py-3 text-xs font-bold uppercase tracking-wider text-white bg-[#16382C] hover:bg-[#1D4738] rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60"
                   >
                     {isSubmitting ? (
                       <>
@@ -387,7 +387,7 @@ END:VCALENDAR`;
                       </>
                     ) : (
                       <>
-                        <Calendar className="w-4 h-4 text-[#72B7BC]" />
+                        <Calendar className="w-4 h-4 text-[#45AC8B]" />
                         <span>Confirm Appointment Request</span>
                       </>
                     )}
@@ -399,47 +399,47 @@ END:VCALENDAR`;
         ) : (
           /* Confirmation State */
           <div className="text-center py-6">
-            <div className="w-16 h-16 rounded-full bg-[#E7F2F8] text-[#72B7BC] flex items-center justify-center mx-auto mb-4 ring-8 ring-[#CDE7E4]/40">
+            <div className="w-16 h-16 rounded-full bg-[#E9F6F1] text-[#45AC8B] flex items-center justify-center mx-auto mb-4 ring-8 ring-[#D1ECE2]/40">
               <CheckCircle2 className="w-10 h-10" />
             </div>
 
-            <div className="text-xs font-bold text-[#72B7BC] uppercase tracking-widest mb-1">
+            <div className="text-xs font-bold text-[#45AC8B] uppercase tracking-widest mb-1">
               Appointment Successfully Reserved
             </div>
 
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-[#17324D] font-display">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-[#16382C] font-display">
               We Look Forward to Welcoming You.
             </h3>
 
-            <p className="text-xs sm:text-sm text-[#17324D]/75 max-w-md mx-auto mt-2">
+            <p className="text-xs sm:text-sm text-[#16382C]/75 max-w-md mx-auto mt-2">
               Your appointment request has been scheduled with our clinical triage coordinator.
             </p>
 
             {/* Reference Card */}
-            <div className="my-6 p-5 rounded-2xl bg-[#F8F6F0] border border-[#17324D]/10 text-left max-w-md mx-auto space-y-2 text-xs">
-              <div className="flex justify-between pb-2 border-b border-[#17324D]/10">
-                <span className="text-[#17324D]/60 font-medium">Reference Code:</span>
-                <span className="font-bold text-[#17324D] font-display tracking-wider">
+            <div className="my-6 p-5 rounded-2xl bg-[#F8F6F0] border border-[#16382C]/10 text-left max-w-md mx-auto space-y-2 text-xs">
+              <div className="flex justify-between pb-2 border-b border-[#16382C]/10">
+                <span className="text-[#16382C]/60 font-medium">Reference Code:</span>
+                <span className="font-bold text-[#16382C] font-display tracking-wider">
                   {confirmedBooking.reference}
                 </span>
               </div>
               <div className="flex justify-between">
-                <span className="text-[#17324D]/60 font-medium">Patient:</span>
-                <span className="font-semibold text-[#17324D]">{confirmedBooking.patientName}</span>
+                <span className="text-[#16382C]/60 font-medium">Patient:</span>
+                <span className="font-semibold text-[#16382C]">{confirmedBooking.patientName}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-[#17324D]/60 font-medium">Service:</span>
-                <span className="font-semibold text-[#17324D] truncate max-w-[200px]">{confirmedBooking.service}</span>
+                <span className="text-[#16382C]/60 font-medium">Service:</span>
+                <span className="font-semibold text-[#16382C] truncate max-w-[200px]">{confirmedBooking.service}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-[#17324D]/60 font-medium">Specialist:</span>
-                <span className="font-semibold text-[#17324D]">{confirmedBooking.doctor}</span>
+                <span className="text-[#16382C]/60 font-medium">Specialist:</span>
+                <span className="font-semibold text-[#16382C]">{confirmedBooking.doctor}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-[#17324D]/60 font-medium">Date & Time:</span>
-                <span className="font-semibold text-[#17324D]">{confirmedBooking.date} · {confirmedBooking.time}</span>
+                <span className="text-[#16382C]/60 font-medium">Date & Time:</span>
+                <span className="font-semibold text-[#16382C]">{confirmedBooking.date} · {confirmedBooking.time}</span>
               </div>
-              <div className="flex justify-between pt-1 text-[11px] text-[#72B7BC]">
+              <div className="flex justify-between pt-1 text-[11px] text-[#45AC8B]">
                 <span>Hospital Location:</span>
                 <span>{HOSPITAL_INFO.address}</span>
               </div>
@@ -449,23 +449,23 @@ END:VCALENDAR`;
             <div className="flex flex-wrap items-center justify-center gap-3">
               <button
                 onClick={copyDetails}
-                className="px-4 py-2 text-xs font-semibold text-[#17324D] bg-white border border-[#17324D]/15 rounded-xl hover:bg-[#F8F6F0] transition-colors flex items-center gap-1.5 cursor-pointer"
+                className="px-4 py-2 text-xs font-semibold text-[#16382C] bg-white border border-[#16382C]/15 rounded-xl hover:bg-[#F8F6F0] transition-colors flex items-center gap-1.5 cursor-pointer"
               >
-                {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5 text-[#72B7BC]" />}
+                {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5 text-[#45AC8B]" />}
                 <span>{copied ? 'Copied Details' : 'Copy Details'}</span>
               </button>
 
               <button
                 onClick={downloadICS}
-                className="px-4 py-2 text-xs font-semibold text-[#17324D] bg-white border border-[#17324D]/15 rounded-xl hover:bg-[#F8F6F0] transition-colors flex items-center gap-1.5 cursor-pointer"
+                className="px-4 py-2 text-xs font-semibold text-[#16382C] bg-white border border-[#16382C]/15 rounded-xl hover:bg-[#F8F6F0] transition-colors flex items-center gap-1.5 cursor-pointer"
               >
-                <Download className="w-3.5 h-3.5 text-[#72B7BC]" />
+                <Download className="w-3.5 h-3.5 text-[#45AC8B]" />
                 <span>Add to Calendar (.ics)</span>
               </button>
 
               <button
                 onClick={onClose}
-                className="px-6 py-2 text-xs font-bold uppercase tracking-wider text-white bg-[#17324D] rounded-xl hover:bg-[#1a3957] transition-all cursor-pointer"
+                className="px-6 py-2 text-xs font-bold uppercase tracking-wider text-white bg-[#16382C] rounded-xl hover:bg-[#1D4738] transition-all cursor-pointer"
               >
                 Done
               </button>

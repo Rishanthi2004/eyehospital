@@ -15,6 +15,7 @@ import { FinalCtaSection } from './components/FinalCtaSection';
 import { Footer } from './components/Footer';
 import { BookingModal } from './components/BookingModal';
 import { LegalModal } from './components/LegalModal';
+import { NavigationPopup } from './components/NavigationPopup';
 
 export default function App() {
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
@@ -35,12 +36,15 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F6F0] text-[#17324D] selection:bg-[#72B7BC]/30 selection:text-[#17324D] flex flex-col font-sans">
+    <div className="min-h-screen bg-[#F8F6F0] text-[#16382C] selection:bg-[#45AC8B]/30 selection:text-[#16382C] flex flex-col font-sans">
       {/* 24/7 Acute Ophthalmic Emergency Triage Banner */}
       <EmergencyBanner />
 
       {/* Primary Sticky Top Bar */}
       <Navbar onOpenBooking={() => handleOpenBooking()} />
+
+      {/* Navigation Entrance Popup */}
+      <NavigationPopup />
 
       {/* Main Content Sections */}
       <main className="flex-1">
